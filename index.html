@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Title</title>
+
+  <style>
+    /* Header */
+    * {}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+      overflow-x: hidden;
+
+    }
+
+    * {
+      overflow-x: hidden !important;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px;
+      align-items: center;
+    }
+
+    .header a {
+      margin-right: 20px;
+      text-decoration: inherit;
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 15px;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+
+
+    .header__right {
+      display: flex;
+      margin-left: auto;
+      min-width: 13vw;
+      justify-content: space-between;
+    }
+
+    .header__right .header__apps {
+      margin-right: 2px;
+    }
+
+    /*mainbody*/
+
+    .mainBody {
+      flex: 1;
+      display: flex;
+      margin-top: 1%;
+      flex-direction: column;
+    }
+
+    .mainBody img {
+      object-fit: contain;
+      height: 100px;
+    }
+
+    .search__input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #73b504;
+      height: 30px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      width: 75vw;
+      margin: 0 auto;
+      margin-top: 40px;
+      max-width: 560px;
+    }
+
+    .search__input input {
+      flex: 1;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+    }
+
+    .search__input .material-icons {
+      color: gray;
+    }
+
+    .search__buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search__buttons button {
+      margin: 5px;
+      padding: 10px 15px;
+      background-color: #73b504;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: #FFF;
+    }
+
+
+
+    #message {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 0 auto;
+
+      background-color: #E7E9EB;
+      padding: 30px 50px;
+      width: 400px;
+      text-align: center;
+      border-left: 2px solid #73b504;
+    }
+
+    #message {
+      display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #message {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        font-size: 6px;
+        background-color: #E7E9EB;
+        padding: 10px 10px;
+        width: 400px;
+        text-align: center;
+        border-left: 2px solid #73b504;
+
+      }
+
+      .header {
+        display: none;
+      }
+
+      .search__input {
+        display: flex;
+        align-items: center;
+        border: 1px solid #73b504;
+        height: 20px;
+        padding: 5px 10px;
+        /* border-radius: 999px; */
+        width: 75vw;
+        margin: 0 auto;
+        margin-top: 40px;
+        max-width: 560px;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 328px) {
+
+      .search__input {
+        display: flex;
+        align-items: center;
+        border: 1px solid #73b504;
+        height: 20px;
+        padding: 5px 10px;
+        /* border-radius: 999px; */
+        width: 75vw;
+        margin: 10 auto;
+        margin-top: 40px;
+        max-width: 560px;
+        overflow: hidden;
+
+      }
+
+      #message {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        font-size: 6px;
+        background-color: #E7E9EB;
+        padding: 10px 10px;
+        width: 400px;
+        text-align: center;
+        border-left: 2px solid #73b504;
+
+      }
+
+
+    }
+
+
+
+
+
+
+
+    /* .wrapper {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-top: 150px;
+    }
+
+    .input-file {
+      width: 500px;
+      height: 70px;
+      border-radius: 35px;
+      border: 1px solid hsla(89, 43%, 51%, 0.3);
+      outline: none;
+    }
+
+
+    ::placeholder {
+      position: relative;
+      left: 8px;
+
+    } */
+
+    */
+    /*
+Basic input element using psuedo classes
+*/
+  </style>
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="header__right">
+      <a href="https://my-burger-api.herokuapp.com/burgers">API</a>
+      <a href="https://my-burger-api.herokuapp.com/burgers">URL</a>
+      <span class="material-icons header__apps"> apps </span>
+      <!-- <span class="material-icons"> account_circle </span> -->
+    </div>
+  </div>
+
+  <!-- Main Body Starts -->
+  <div class="mainBody">
+    <img
+   src="https://i.pinimg.com/originals/b7/fa/81/b7fa81f3d329b065738fea842388b37f.png"
+   alt="Google Logo"
+ />
+    <!-- <h1>Shorten Url </h4> -->
+
+    <!-- Search Starts -->
+    <div class="search">
+      <div class="search__input">
+        <span class="material-icons"> search </span>
+        <input type="text" id="myInput" placeholder="INPUT URL"
+          />
+        <!-- <span class="material-icons"> mic </span> -->
+      </div>
+
+      <div class="search__buttons">
+        <button class="btn" id="fetchUserDataBtn">Shorten Url</button>
+      </div>
+      <!-- <p id="message"></p> -->
+      <div id="message">
+      </div>
+
+      <!-- <span class="material-icons-outlined"> -->
+
+
+      <!-- <input type="text"  id="message"  id="message"> -->
+
+
+    </div>
+    <!-- Search Ends -->
+
+
+    <!-- Main Body Ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="wrapper">
+
+      <form>
+        <div>
+          <input
+        name="text"
+        value
+        id="myInput"
+        class="input-file"
+        placeholder="Paste a URL to shorten"
+        type="text"
+      />
+        </div>
+        <div>
+          <button class="btn" id="fetchUserDataBtn">Click</button>
+        </div>
+      </form>
+    </div> -->
+
+
+
+    <script>
+      //     document.querySelector("form").addEventListener("submit", get_number);
+      // function get_number(e){
+      //   e.preventDefault();
+      //     const n = document.querySelector("#myInput").value;
+      //     console.log('n:', n)
+
+      // }
+      document
+        .getElementById('fetchUserDataBtn')
+        .addEventListener('click', fetchUserData);
+
+        function fetchUserData(e) {
+}
+
+      function fetchUserData(e) {
+        e.preventDefault();
+  document.getElementById("message").style.display = "block";
+
+
+        const n = document.querySelector('#myInput').value;
+        console.log(n);
+        fetch('https://api-ssl.bitly.com/v4/shorten', {
+          method: 'POST',
+          headers: {
+            Authorization: 'Bearer cba2544a14b7ce7b98558967b7aaf935998c289c',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ long_url: n, domain: 'bit.ly' })
+        })
+          .then(res => res.json())
+          .then(d => {
+            console.log(d);
+             let {id,link} = d;
+             console.log('this is the value of',id);
+             
+            //  let myString = id.join(".");
+            //  let bitlike=myString;
+            //  console.log('this is he calioi',bitlike);
+            //  const obj = JSON.parse(myString);
+// console.log(obj.fruit, obj.fingers);
+
+
+            let output = '';
+            // d.forEach(function(post) {
+            //   output += `<li>${post.link}</li>`;
+            // });
+            output += Object(id); //returnes the array ['no','my'];
+
+            // let val = object.values(d);
+            // output += `<h1>${val.id}</h1>`;
+
+            // function iterate(d){
+            //       output += `<li>${d.link}</li>`;
+
+            // }
+            // Array.prototype.forEach.call(d, iterate);
+
+            document.getElementById('message').innerHTML = output;
+          });
+      }
+
+      //     function getInputValue(){
+      //             // Selecting the input element and get its value
+      //             var inputVal = document.getElementById("myInput").value;
+      //             let userInput={
+      //       "long_url"="inputVal",
+      //         "domain":"bit.ly",
+      //       }
+      //       let options = {
+      //             method: 'POST',
+      //             headers: {
+      //                 'Content-Type':
+      //                     'application/json;charset=utf-8'
+      //             },
+      //             body: JSON.stringify(user)
+
+      //           }
+      //           // Fake api for making post requests
+      //         let fetchRes = fetch(
+      // "https://api-ssl.bitly.com/v4/shorten",
+      //                                         options);
+      //         fetchRes.then(res =>
+      //             res.json()).then(d => {
+      //                 console.log(d)
+      //             })
+
+      //         }
+    </script>
+</body>
+
+</html>
